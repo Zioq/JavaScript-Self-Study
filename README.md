@@ -1,4 +1,4 @@
-# JavaScript-Self-Study
+# JavaScript Self-Study Repository
 This is a repository to archive `JavaScript` self study code and document
 
 Index
