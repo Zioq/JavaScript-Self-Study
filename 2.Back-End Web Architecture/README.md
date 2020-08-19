@@ -94,4 +94,4 @@ SuperCoolShop has an huge number of products, and many different categories for 
 9. Alice’s browser receives the response and uses that information to create and render the view that Alice ultimately sees!
 
 
-copyrihgt: https://www.codecademy.com/
+copyright: https://www.codecademy.com/
