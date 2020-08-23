@@ -9,4 +9,5 @@ Index
 3. Objects
     * Objects
     * Advanced - Objects
+4. JavaScript Modules
 
