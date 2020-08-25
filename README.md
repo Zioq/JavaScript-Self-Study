@@ -10,4 +10,6 @@ Index
     * Objects
     * Advanced - Objects
 4. JavaScript Modules
+   * Node.js module syntax
+   * ES6 module syntax
 
