@@ -27,3 +27,8 @@
 
  // Use export default to export the Train moduel 
  export default Train;
+
+ /**
+  * When using ES6 syntax, we use `export default` in place of `module.export`. 
+  * Node.js DOES NOT support export default by default, so `module.export` is usually used for Node.js development and ES6 syntax is used for front-end development.
+  */

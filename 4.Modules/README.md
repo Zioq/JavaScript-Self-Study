@@ -11,3 +11,13 @@ Modules are particulary useful for a number of reasons.
 Mainly, in this tutorial material, I will cover two ways to implement moduels in JavaScript: 
 Node.js's `module.exports` and `require()` syntax, 
 ES6 `import/export` syntax. 
+
+> *Modules* in Noe.js are reusable pieces of code that cna be exported form on progrma and imported or use in another program.
+- `module.exports` exports the module for use in another program.
+- `require()` imports the moduel for use in the current program.
+
+> ES6 introduced a more flexible, easier syntax to export modules:
+- defualt exports use `export default` to export JavaScript objects, functions, and primitive data types.
+- naemd exports use the `export` keyword to export data in variable.
+- named exports can be aliased with the `as` keyword.
+- `import` is a keyword that imports any object, function, or data type.

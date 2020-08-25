@@ -16,9 +16,3 @@
  * 3. Export the module with `module.exports`
  *  */ 
 
- /** [Module.exports 2]
-  *  We can also wrap any collection of data and funcitons in an object, and export the object using `module.exeports`.
-  */
- module.exports = {
-     
- }

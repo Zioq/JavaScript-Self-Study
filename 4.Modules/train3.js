@@ -1,8 +1,6 @@
-/** Named Exports
- * ES6 introduced a second common approach to export modules. In addition to export default, named exports allow us to export data throught the use of variables. 
- * 
- * 1. When we use named exports, we are not setting the properties on an object. Each export is stored in its own variable. 
- * 2. Exports objects by their variable names, Notice the keyword `export` is the prefix
+
+/** [Export as ]
+ *  Named exports also conventiently offer a way to change the naem of variable when we export or import them. We can do this with the `as` keyword. The `as` keyword allows us to give a variable name an alias. 
  */
 
 let listOfTrain = [
@@ -35,5 +33,5 @@ function meetminimumStopRequirement(stop, kminimumStopRequirement) {
     }
 } 
 
-// Using the `export` keyword, export the variables
-export {listOfTrain, minimumStopRequirement, meetminimumStopRequirement};
+// Use `as` keyword
+export {listOfTrain as Train, minimumStopRequirement as minStopReqs, meetminimumStopRequirement as meetminStopReqs};
