@@ -34,4 +34,4 @@ function meetminimumStopRequirement(stop, kminimumStopRequirement) {
 } 
 
 // Use `as` keyword
-export {listOfTrain as Train, minimumStopRequirement as minStopReqs, meetminimumStopRequirement as meetminStopReqs};
+export {listOfTrain as Train, minimumStopRequirement as minStopReqs, meetminimumStopRequirement as meetminStopReq};
