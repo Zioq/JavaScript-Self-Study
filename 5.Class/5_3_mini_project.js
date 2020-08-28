@@ -134,3 +134,54 @@ speed.addRating(1);
 speed.addRating(5);
 // Log the speed's average ratings
 console.log(speed.getAverageRating());
+
+// Create CD class that extends Media
+class CD extends Media {
+    // CD Constructor
+    constructor(artist, title, songs) {
+        super(title);
+        this._artist = artist;
+        this._songs = songs;
+    } 
+
+    //getter
+    get artist() {
+        return this._artist;
+    }
+    get songs() {
+        return this._songs;
+    }
+
+    // Method for shuffling the songs randomly sorted array 
+    shuffle(songs) {
+        for (let i =songs.length -1; i >0; i--) {
+            const j = Math.floor(Math.random()* (i+1));
+            [songs[i],songs[j]]= [songs[j],songs[i]];
+        }
+        return songs;
+    }
+
+}
+
+// Create a CD instance
+const theMartinGarrixExperiece = new CD("Martin Garrix","THe Martine Garrix Experience",["Summer Days", "No Sleep", "High On Life", "In the Name of Love", "There for you"]);
+
+console.log(theMartinGarrixExperiece);
+
+// Call.toggleCheckOutStatus() on the theMartinGarrixExperiece
+theMartinGarrixExperiece.toggleCheckOutStatus();
+// Log the ischekcedOut proeprty
+console.log(theMartinGarrixExperiece.isCheckedOut);
+
+// Add the ratings
+theMartinGarrixExperiece.addRating(5);
+theMartinGarrixExperiece.addRating(4);
+theMartinGarrixExperiece.addRating(5);
+
+// Log the CD's average ratings
+console.log(theMartinGarrixExperiece.getAverageRating());
+
+// suffle the songs
+//console.log(theMartinGarrixExperiece.songs);
+const songlist = theMartinGarrixExperiece.songs;
+console.log(theMartinGarrixExperiece.shuffle(songlist));
