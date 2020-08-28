@@ -13,3 +13,6 @@ Index
    * Node.js module syntax
    * ES6 module syntax
 5. Class
+   * Class Constructor
+   * Class Inheritance
+   * Mini project
