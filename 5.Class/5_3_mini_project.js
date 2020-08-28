@@ -185,3 +185,46 @@ console.log(theMartinGarrixExperiece.getAverageRating());
 //console.log(theMartinGarrixExperiece.songs);
 const songlist = theMartinGarrixExperiece.songs;
 console.log(theMartinGarrixExperiece.shuffle(songlist));
+
+class Catalog {
+
+    constructor() {
+        this._Book = [];
+        this._Movie = [];
+        this._CD = [];
+    }
+
+    //getter
+    get Books() {
+        return this._Book;
+    }
+    
+    get Movies() {
+        return this._Movie;
+    }
+
+    get CDs() {
+        return this._CD;
+    }
+
+    
+    addMedia(value) {
+
+        if(value.constructor.name === 'Book') {
+            this.Books.push(value);
+        } else if(value.constructor.name === 'Movie') {
+            this.Movies.push(value);
+        } else if(value.constructor.name === 'CD') {
+            this.CDs.push(value);
+        }
+        
+
+    }
+}
+
+const catalog = new Catalog();
+// Add the instace of classes in catalog class
+catalog.addMedia(histroyOfEverything);
+catalog.addMedia(speed);
+catalog.addMedia(theMartinGarrixExperiece);
+console.log(catalog);
