@@ -9,6 +9,7 @@ Index
 3. Objects
     * Objects
     * Advanced - Objects
+    * Mini project
 4. JavaScript Modules
    * Node.js module syntax
    * ES6 module syntax
