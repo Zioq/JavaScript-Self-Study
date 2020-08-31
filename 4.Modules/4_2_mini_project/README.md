@@ -1,4 +1,4 @@
-** Mini Project: Work Around
+## Mini Project: Work Around
 
 WorkAround is a human resources program that returns basic information about an employee, based on salary data. Using WorkAround, one can use an employee’s salary data to:
 
