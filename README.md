@@ -13,6 +13,7 @@ Index
 4. JavaScript Modules
    * Node.js module syntax
    * ES6 module syntax
+   * Mini project
 5. Class
    * Class Constructor
    * Class Inheritance
