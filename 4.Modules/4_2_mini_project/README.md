@@ -14,4 +14,4 @@ WorkAround is a human resources program that returns basic information about an 
 
 We are using ES6 syntax for import/export modules.
 
-The `4_2_1_original.js` file will be divide into 2 files(`4_2_2_employee.js` and `4_2_3_workAround.js`) to show how to `import/export module` is worked.
+The `4_2_1_original.js` file will be divided into 2 files(`4_2_2_employee.js` and `4_2_3_workAround.js`) to show how to `import/export module` is worked.
