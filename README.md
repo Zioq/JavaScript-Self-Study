@@ -2,6 +2,12 @@
 This is a repository to archive `JavaScript` self study code and document
 
 Index
+0. Functions
+    * Funciton Declarations & Calling a Function
+    * Parameters and Arguments  & Default Parameters
+    * Helper Functions
+    * Function Expressions
+    * Allow Functionos
 1. Higher-Order Functions 
     * Iterators
 2. Back-End Web Architecture
