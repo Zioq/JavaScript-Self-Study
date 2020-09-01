@@ -24,3 +24,7 @@ Index
    * Class Constructor
    * Class Inheritance
    * Mini project
+6. Promises
+   * Constuct Promise
+   * setTimeout()
+   
