@@ -29,4 +29,7 @@ Index
 6. Promises
    * Constuct Promise
    * setTimeout()
+   * onFullfilled * onRejected Functions
+   * catch() with Promises
+   * Chaining Mutiple Promises
    

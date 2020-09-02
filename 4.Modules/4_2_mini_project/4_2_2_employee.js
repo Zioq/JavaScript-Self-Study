@@ -32,27 +32,35 @@ export function getCadre () {
   } else return 'seniorLevel';
 }
 
-Employee.calculateTax = function () {
+export function calculateTax () {
   return payGrades[getCadre()].taxMultiplier * Employee.salary;
-};
+}
 
-Employee.getBenefits = function() {
+export function getBenefits () {
   return payGrades[Employee.getCadre()].benefits.join(', ');
-};
+}
 
-Employee.calculateBonus = function () {
+export function calculateBonus () {
   return 0.02 * Employee.salary;
-};
+}
 
-Employee.reimbursementEligibility = function() {
-  let reimbursementCosts = { health: 5000, housing: 8000, wellness: 6000, gym: 12000 };
+export function reimbursementEligibility () {
+  
+    let reimbursementCosts = { 
+      health: 5000, 
+      housing: 8000, 
+      wellness: 6000, 
+      gym: 12000 };
+
   let totalBenefitsValue = 0; 
+  
   let employeeBenefits = payGrades[getCadre()].benefits;
+  
   for (let i = 0; i < employeeBenefits.length; i++) {
     totalBenefitsValue += reimbursementCosts[employeeBenefits[i]];
   }
   return totalBenefitsValue;
-};
+}
 
 export default Employee;
 
