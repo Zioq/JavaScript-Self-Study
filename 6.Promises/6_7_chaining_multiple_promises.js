@@ -3,13 +3,13 @@
  * 
  * We take our dirty clothes and put them in the washing machine. If the clothes are cleaned, then we’ll want to put them in the dryer. After the dryer runs, if the clothes are dry, then we can fold them and put them away.
  * 
- * The process of chaining promises together is called composition. Promises are designed with composition in mind!
+ * This process of chaining promises together is called composition. Promises are designed with composition in mind!
  */
 
 //Invoke a funciton firstPromiseFunction() which returns a promise 
 // We invoke .then() with an anonymous funciton as the success handler
 firstPromiseFunction().then((firstResolveVal) => {
-    //Inside the success handler we `return` a new promise - rhe result of invoking a second function, `secondPromiseFunction()` with the first promise's resolved value
+    //Inside the success handler we `return` a new promise - the result of invoking a second function, `secondPromiseFunction()` with the first promise's resolved value
     return secondPromiseFunciton(firstResolveVal);
     // We invoke a second `.then()` to handle the logic for the second promise setting.
 }).then((secondResolveVal) => {

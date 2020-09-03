@@ -6,6 +6,7 @@ const inventory = {
 
 const checkInventory = (order) => {
     return new Promise((resolve, reject) => {
+        // Use setTimeout() to ensure that the checkInventory() promise settles asynchronously.
         setTimeout(() => {
             let inStock = order.every(item => inventory[item[0]] >= item[1]);
             if (inStock) {
