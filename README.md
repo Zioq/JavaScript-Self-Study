@@ -32,4 +32,5 @@ Index
    * onFullfilled * onRejected Functions
    * catch() with Promises
    * Chaining Mutiple Promises
+   * Promise.all()
    
