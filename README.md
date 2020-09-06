@@ -34,9 +34,3 @@ Index
    * Chaining Mutiple Promises
    * Promise.all()
    * Mini project
-<<<<<<< HEAD
-7. Asnc Await
-=======
-7. Async Await
-   
->>>>>>> 1d2c20ba244aa9ea30ad065e412ab53fa7e9465e
