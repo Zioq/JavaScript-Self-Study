@@ -1,4 +1,9 @@
 
+const readline = require('readline').createInterface({
+    input:process.stdin,
+    output: process.stdout
+});
+
 // Apple product inventory & price
 const inventory = {
     'iphone': {
@@ -62,20 +67,41 @@ const processPayment = (responseArray) => {
             let yourGiftCardBalace = order.giftCardBalance;
 
             console.log(`This is your Gift Card balace: ${yourGiftCardBalace} `);
-            console.log(`Do you want to use your Gift Card Balace?: (Y/N)`);
+            readline.question(`Do you want to use your Gift Card Balace?: (Y/N)`,(input) => {
 
-            
-            
-
-            if(hasEnoughMoney) {
-                console.log(`Payment processed with giftcard. Generating shipping lable.`);
-                //Generate tracking number
-                let trackingNumber = generateTrackingNumber();
-                resolve([order,trackingNumber]);
-            } else {
-                reject(`Cannot process order: Giftcard balace was insufficeint.`);
-            }
-            
+                if(input==='Y' || input ==='y') {
+                    let hasEnoughMoney = order.giftCardBalance >= totalPrice;
+                    if(hasEnoughMoney) {
+                        let remainBalance = order.giftCardBalance - totalPrice;
+                        console.log(`Payment processed with giftcard. The remain balance in Gift Card is ${remainBalance}`);
+                        console.log(`Generating shipping label.`);
+                        let trackingNumber = generateTrackingNumber();
+                        resolve([order,trackingNumber]);
+                    } else {
+                        let lastPayment = totalPrice - order.giftCardBalance;
+                        console.log(`Payment processed with giftcard. The reamin balance to pay is ${lastPayment}`);
+                        console.log(`Payment will be processed with your credit.`);
+                        let underCreditLimit = order.creditLimit > lastPayment;
+                        if(underCreditLimit) {
+                            console.log(`Payment with your credit card is succeed.   Generating shipping label.`);
+                            let trackingNumber = generateTrackingNumber();
+                            resolve([order,trackingNumber]);
+                        } else {
+                            reject(`Caanot process order: Check your credit limit`);
+                        }
+                    }
+                } else if(input === 'N' || input ==='n') {
+                    console.log(`Payment will be processed with your credit.`);
+                        let underCreditLimit = order.creditLimit > totalPrice;
+                        if(underCreditLimit) {
+                            console.log(`Payment with your credit card is succeed.   Generating shipping label.`);
+                            let trackingNumber = generateTrackingNumber();
+                            resolve([order,trackingNumber]);
+                        } else {
+                            reject(`Caanot process order: Check your credit limit`);
+                        }
+                }
+            });
         }, generateDelayTime());
     });
 };

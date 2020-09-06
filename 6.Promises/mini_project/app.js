@@ -4,8 +4,8 @@ const {checkInventory, processPayment, shipOrderventory, shipOrder} = require('.
 // Get order
 const order =  {
     'items': [['iphone',1], ['macbook',1]],
-    'giftCardBalance': 10000.00,
-    'creditLimit': 50000000.00
+    'giftCardBalance': 500.00,
+    'creditLimit': 1000.00
 };
 
 // Design Chaining promise process
