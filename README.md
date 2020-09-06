@@ -34,5 +34,5 @@ Index
    * Chaining Mutiple Promises
    * Promise.all()
    * Mini project
-7. Async Awiat
+7. Async Await
    
