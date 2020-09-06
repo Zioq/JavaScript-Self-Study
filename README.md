@@ -33,4 +33,5 @@ Index
    * catch() with Promises
    * Chaining Mutiple Promises
    * Promise.all()
+   * Mini project
    
