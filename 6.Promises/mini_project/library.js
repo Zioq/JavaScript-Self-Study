@@ -87,7 +87,7 @@ const processPayment = (responseArray) => {
                             let trackingNumber = generateTrackingNumber();
                             resolve([order,trackingNumber]);
                         } else {
-                            reject(`Caanot process order: Check your credit limit`);
+                            reject(`Cannot process order: Check your credit limit`);
                         }
                     }
                 } else if(input === 'N' || input ==='n') {

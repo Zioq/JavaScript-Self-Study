@@ -16,7 +16,7 @@
  let myPromises = Promise.all([retunrsPromOne(), retrunsPromTwo(), returnsPromThree()]);
 
  
- myPromises // We invoke .then() with a success handler which will pritn the array of resolved values if each promise resolved successfully.
+ myPromises // We invoke .then() with a success handler which will print the array of resolved values if each promise resolved successfully.
  .then((arrayOfValues)=> {
      console.log(arrayOfValues);
  }) // We invoke .catch() with a failure handler which will print the first rejection message if any promise rejects. 
