@@ -1,18 +1,25 @@
 // Import module
-const {checkInventory} = require('./library.js');
+const {checkInventory, processPayment, shipOrderventory, shipOrder} = require('./library.js');
 
 // Get order
-const order = [['iphone',100],['macbook',300]];
-
-// Make success handler
-const handleSuccess = (resolveValue) => {
-    console.log(resolveValue);
+const order =  {
+    'items': [['iphone',1], ['macbook',1]],
+    'giftCardBalance': 10000.00,
+    'creditLimit': 50000000.00
 };
 
-// Make Failure handler
-const handleFailure = (rejectionReason) => {
-    console.log(rejectionReason);
-};
-
-// Invoke checkInventory with order
-checkInventory(order).then(handleSuccess,handleFailure);
+// Design Chaining promise process
+checkInventory(order).then((resolvedValueArray)=> {
+    // success handler return a processPayement() promise
+    return processPayment(resolvedValueArray);
+})
+.then((resolvedValueArray) => {
+    // success handler should return a shipOrder promise
+    return shipOrder(resolvedValueArray);
+})
+.then((successMessage) => {
+    console.log(successMessage);
+})
+.catch((errorMessage) => {
+    console.log(errorMessage);
+});
