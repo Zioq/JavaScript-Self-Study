@@ -35,3 +35,5 @@ Index
    * Promise.all()
    * Mini project
 7. HTTP Requests
+   * http requests
+   * XHR GET requests
