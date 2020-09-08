@@ -34,4 +34,4 @@ Index
    * Chaining Mutiple Promises
    * Promise.all()
    * Mini project
-7. Asaync Await
+7. HTTP Requests
