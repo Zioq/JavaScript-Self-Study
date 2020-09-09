@@ -1,7 +1,7 @@
 /** [XHR GET Requests I]
  *  Asychronous JavaScript and XML (AJAX), enables requests to be made after the initial page load. Initially, AJAX was used only for XML formmated data, now it can be used to make requests that have many diffenet formats.
  *  Similarly, the  XMLHttpRequest (XHR) API, named for XML, cna be used to make many kinds of requests and supports other format of data. 
- *  Remeber, we use `GET` to retrieve data from a source.
+ *  Remember, we use `GET` to retrieve data from a source.
  */
 
  //XMLHttpRequest GET

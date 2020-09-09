@@ -5,8 +5,12 @@
  *  Web developers use the event loop to create a smoother browsing experience by deciding when to call functions and how to handle asynchronous events. We’ll be exploring one system of technologies called Asynchronous JavaScript and XML, or AJAX.
  */
 
+ // [Concept of eventa loop works]
+
  console.log(`This is a first message`);
  setTimeout(()=> {
     console.log(`This will be show up at last`);
  },1500);
  console.log(`This is second message`);
+ // Using setTimeout(), which will pass a f unction call to the queue. The first argument is a callback and the second arguement is the numbner of milliseconds the program must wait before the callback can be run. The other console.log calls are run from the stack. 
+

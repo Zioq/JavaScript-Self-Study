@@ -1,5 +1,5 @@
 # HTTP Requests
-     Understand the basics of how your web browser communicates with the internet.
+    > Understand the basics of how your web browser communicates with the internet.
 
 ## Introduction:
  The internet is made up of a lot of resources hosted on different servers. The term `resource` means any entity on the web, including HTML files, stylesheets, video, images and scripts. To access content on the internet, your browser must *ask* these servers for the resources it wants, and then display these resources to you. This protocol of request and responses enables you view page in your browser.
@@ -16,7 +16,7 @@
 
  Once the TCP connection is established, the clint send a HTTP `GET` requests to the server to retrieve the webpage it should display. After the server has sent the response, it closes the TCP connection. If you open the webpage in your browser again, or if your browser automatically requests something form the server, a new connection is opened which follows the same process describe above. `GET` request one kind of HTTP method a client can call. (GET, POST, PUT, DELETE)
  
-     THERE ARE 4 BASIC HTTP VERBS WE USE IN REQUEST TO INTERACT WITH RESOURCES IN A `REST SYSTEM`
+    > THERE ARE 4 BASIC HTTP VERBS WE USE IN REQUEST TO INTERACT WITH RESOURCES IN A `REST SYSTEM`
     * GET: `Retrieve` a specific resource (by id) or a `collection` of resources.
     * POST: `Create` a new resource.
     * PUT: `Update` a specific resource (by id)
@@ -61,3 +61,4 @@ The mail delivery person returns on the light speed train, ripping up the tracks
 
 This time the mail delivery person is able to retrieve it from the business. You can now read your newspaper in peace until you decide you want to read the next page, at which point, you would make another request and give it to the mail delivery person.
 
+`
