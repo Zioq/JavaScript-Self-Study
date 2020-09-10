@@ -37,3 +37,5 @@ Index
 7. HTTP Requests
    * http requests
    * XHR GET requests
+   * XHR POST requests
+   * XHR GET & POST Demo code
