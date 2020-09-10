@@ -1,7 +1,9 @@
 const getBtn = document.getElementById('get-btn');
 const postBtn = document.getElementById('post-btn');
 
-const getData = () => {};
+const getData = () => {
+    
+};
 
 const sendData = () => {};
 

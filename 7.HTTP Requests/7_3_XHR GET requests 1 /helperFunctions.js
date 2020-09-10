@@ -16,16 +16,16 @@ const renderResponse = (res) => {
     let wordList = [];
 
     // Loop through the response and maxing out at 10
-    for (let i =0; i < Math.min(res.lenght,10); i++) {
-        // Creating a list of words
+    for(let i = 0; i < Math.min(res.length, 10); i++){
+        // creating a list of words
         wordList.push(`<li>${res[i].word}</li>`);
-    }
+      }
     
     //Join the array of HTML strings into one string
     wordList = wordList.join("");
 
     //Manipulates responseFiled to render the modified response
-    responseField.innerHTML =`<p>You might be interested in:</p><ol>${wordList}</ol>`;
+    responseField.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
     return;
 };
 
