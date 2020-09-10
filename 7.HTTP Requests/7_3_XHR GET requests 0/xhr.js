@@ -30,7 +30,7 @@ const sendHttpRequest = (method, url, data) => {
 
         // data error handler
         xhr.onerror = () => {
-            reject('Something wnet wrong!');
+            reject('Something went wrong!');
         };
 
         //send JavaScript data to Json data
