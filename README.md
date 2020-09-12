@@ -39,3 +39,4 @@ Index
    * XHR GET requests
    * XHR POST requests
    * XHR GET & POST Demo code
+   * XHR Fetch() API Demo code
