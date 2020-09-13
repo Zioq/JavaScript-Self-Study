@@ -40,3 +40,4 @@ Index
    * XHR POST requests
    * XHR GET & POST Demo code
    * XHR Fetch() API Demo code
+   * XHR POST & Fecth() with PHP
