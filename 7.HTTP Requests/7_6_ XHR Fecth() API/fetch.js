@@ -19,6 +19,7 @@ const sendHttpRequest = (method, url, data) => {
         if(response.status >= 400) { //!response.ok
             return response.json().then(errResData => {
                 const error = new Error('Something went wrong!');
+                // add extra data which should be response body
                 error.data = errResData;
                 // throw an error. This will effectively reject the outer promise so that in the promise chain were we listen to the outer promise we would make it into catch block.
                 throw error;

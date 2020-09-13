@@ -1,0 +1,47 @@
+<title>Fetch API - Sendign Form Data</title>
+
+<body>
+    <h1>Fecth API - Sending Form Data</h1>
+    <form class = "form" id= "myForm">
+        <label for = "input_username">User Name</label>
+        <input type = "text" name = "input_username" id ="input_username">
+        <label for = "input_password">Password</label>
+        <input type ="password" name = "input_password" id="input_password">
+        <button type ="submit"> Login</button>
+    </form>
+
+    <script>
+        const myForm = document.getElementById("myForm")
+
+        //add submit event listener
+        myForm.addEventListener('submit', function (e) {
+            //prevent the page form reloading or navigating away
+            e.preventDefault();
+            //sending data using fetch
+
+            //making a new form data object based on this form. `this` refers to the actual form itself.
+            //FormData object is basically just a collection of key value pairs which match the user name and the user names value and the passsword and password value
+            const formData = new FormData(this);
+            
+            //Using key value pairs to the serach prams object
+            const searchPrams = new URLSearchParams();
+            for (const pair of formData) {
+                searchPrams.append(pair[0],pair[1]);
+            }
+            
+
+            //fetch request to the login.php file
+            fetch("login.php", {
+                method: "POST",
+                body: searchPrams // you can use body forData for searchPrams
+            }).then(function (response) {
+                return response.text();
+            }).then(function (text) {
+                console.log(text);
+            }).catch(function (err) {
+                console.error(err);
+            })
+        })
+    </script>
+
+</body>
