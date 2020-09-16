@@ -42,3 +42,4 @@ Index
    * XHR Fetch() API Demo code
    * XHR POST & Fecth() with PHP
    * Fecth() GET & POST Request
+   * Mini poject
