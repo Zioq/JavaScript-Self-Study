@@ -21,14 +21,19 @@ const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 const getVenues = async () => {
     // Save the value from the user's input filed on the page
     const city = $input.val();
-    console.log(city);
     // Entire of request URL
     const urlToFetch = `${url}${city}&limit=10&client_id=${clientId}&client_secret=${clientSecret}&v=20200921`;
 
     try{
         const response = await fetch(urlToFetch);
         if(response.ok) {
-            console.log(response);
+            const jsonResponse = await response.json();
+            console.log(jsonResponse);
+            //Filter data what we need in the jsonRespoonse
+            const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
+            console.log(venues);
+            
+            return venues;
         }
 
     } catch(error) {
@@ -37,9 +42,44 @@ const getVenues = async () => {
 
 };
 
+const getWeather = async() => {
+
+    try{
+        // Set request url
+        const urlToFetch = `${weatherUrl}?&q=${$input.val()}&APPID=${openWeatherKey}`;
+
+        // Get the response
+        const response = await fetch(urlToFetch);
+
+        // Check the status of response
+        if(response.ok) {
+            const jsonResponse = await response.json();
+            console.log(jsonResponse);
+            
+            return jsonResponse;
+        }
+
+    } catch(error) {
+        console.log(error);
+    }
+};
+
+
+// Runder Function
+const renderVenues = (venues) => {
+    // $veneuDivs is an array of the <div>s in index.html where I will render the information returned in the response from the Foursquare API
+    $venueDivs.forEach(($venue,index) => {
+        console.log($venue);
+    });
+
+};
+
+// Execute functions
 const executeSearch = () => {
 
     getVenues();
+    getWeather();
+    renderVenues();
     //make stop to relaod page.
     return false;
 };
