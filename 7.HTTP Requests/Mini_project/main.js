@@ -13,7 +13,7 @@ const $input = $('#city');
 const $submit = $('#button');
 const $destination = $('#destination');
 const $container = $('.container');
-const $venueDivs = [$("#venue1"), ("#venue2"), ("#venue3")];
+const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"),$("#venue4"),$("#venue5")];
 const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -69,17 +69,39 @@ const getWeather = async() => {
 const renderVenues = (venues) => {
     // $veneuDivs is an array of the <div>s in index.html where I will render the information returned in the response from the Foursquare API
     $venueDivs.forEach(($venue,index) => {
-        console.log($venue);
+        // Represent the individual venue object inside of $venueDivs.
+        const venue = venues[index];
+        console.log(venue);
+
+        // Object representing icon
+        const venueIcon = venue.categories[0].icon;
+        console.log(venueIcon);
+
+        // Construct the full source URL for the venue icon
+        // bf_64 is required to fecth icons with a gray background
+        const venueImgSource = `${venueIcon.prefix}bg_64${venueIcon.suffix}`;
+
+        // Use the HTML String rendering function which will make result with HTML structure
+        let venueHTMLContent = createVenueHTML(venue.name, venue.location,venueImgSource);
+        console.log(venueHTMLContent);
+      
+        // Pass the venueHTMLContent to array of html element. 
+        $venue.append(venueHTMLContent);
+        console.log($venue.text());
     });
+
+    // Rending data into html element directly using a $'page element name what we assign the variable code-line 11'.append() 
+    $destination.append(`<h2>${venues[0].location.city}</h2>`);
+   
+    
 
 };
 
 // Execute functions
 const executeSearch = () => {
 
-    getVenues();
+    getVenues().then(venues => renderVenues(venues));
     getWeather();
-    renderVenues();
     //make stop to relaod page.
     return false;
 };
