@@ -4,6 +4,13 @@
     margin: 0;
 }
 
+main {
+  margin: 0px auto 50px auto;
+  text-align: center;
+  background-size: cover;
+  text-align: center;
+}
+
 h1 {
     padding-top: 150px;
     font-family: Montserrat;
@@ -80,3 +87,62 @@ h1 {
     text-align: left;
     color: #27b7c1;
   }
+
+  #venues, #weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #destination {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    text-align: left;
+    color: #27b7c1;
+  }
+  
+.sectiontitle {
+  width: 300px;
+  align-items: center;
+}
+
+.sectiontitle h2 {
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 3.4px;
+  text-align: left;
+  color: #4a4a4a;
+}
+
+#venues {
+  display: flex;
+  justify-content: space-around;
+  min-height: 250px;
+}
+
+#weather {
+  display: flex;
+  justify-content: space-around;
+  min-height: 150px;
+}
+
+
+#venues, #weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.venue, .weather {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+form {
+  margin-top: 30px;
+  padding-bottom: 10px;
+}

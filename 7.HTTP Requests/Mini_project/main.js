@@ -93,15 +93,20 @@ const renderVenues = (venues) => {
     // Rending data into html element directly using a $'page element name what we assign the variable code-line 11'.append() 
     $destination.append(`<h2>${venues[0].location.city}</h2>`);
    
-    
+};
 
+const renderForecast = (day) => {
+    let weatherHTMLContent = createWeatherHTML(day);
+    
+    //Rendering data into html element directly into page element
+    $weatherDiv.append(weatherHTMLContent);
 };
 
 // Execute functions
 const executeSearch = () => {
 
     getVenues().then(venues => renderVenues(venues));
-    getWeather();
+    getWeather().then(forecast=> renderForecast(forecast));
     //make stop to relaod page.
     return false;
 };
