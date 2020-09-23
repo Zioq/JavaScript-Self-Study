@@ -5,11 +5,17 @@
 
     A `Web Server` is a process running on a computer that listens for incoming requests for information over the internet and sends back responses. Each itme a user navigates to a website on their browser, the browser makes a request to the web server. 
 
+
+```
+
    < Back-End >             < Front-End >
     |       | <=Request(1)   |         |
     |       |                |         |
     |       | (2)Response=>  |         |
     +++++++++                +++++++++++
 
-    The specific format of request (and the resulting response) is called the **protocol**. (ex.HTML). 
-    When a visitor navigators to a website on their browser, similarly to how one places an order for take out, they make an HTTP Request for the resources that make that site. 
+ ```
+
+
+   The specific format of request (and the resulting response) is called the **protocol**. (ex.HTML). 
+   When a visitor navigators to a website on their browser, similarly to how one places an order for take out, they make an HTTP Request for the resources that make that site. 
